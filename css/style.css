@@ -180,7 +180,6 @@ button {
 .btn {
 	font-family: 'open_sansregular', sans-serif;
 	letter-spacing: .2em;
-	line-height: 1.73333333333em;
 	text-transform: uppercase;
 	border-radius: 2px;
 }
@@ -209,8 +208,6 @@ button {
 .title {
 	font-size: 1.2rem;
 	text-transform: uppercase;
-	color: #111;
-	letter-spacing: .5em;
 	font-weight: normal;
 	margin-bottom: 75px;
 }
@@ -218,10 +215,14 @@ button {
 .title.title-light {
 	font-family: 'dosislight', sans-serif;
 	letter-spacing: .3em;
+	line-height: 26px;
+	color: #fff;
 }
 
-.title.title-white {
-	color: #fff;
+.title.title-dark {
+	font-family: 'dosisregular', sans-serif;
+	letter-spacing: .5em;
+	color: #111;
 }
 
 .advantage-icon {
@@ -238,6 +239,22 @@ button {
 	font-size: .73333333333rem;
 	line-height: 38px;
 	letter-spacing: .2em;
+}
+
+.default-text {
+	font-family: 'open_sanslight', sans-serif;
+	line-height: 26px;
+}
+
+.advantage-title {
+	font-family: 'dosisregular', sans-serif;
+	font-size: 14px;
+	letter-spacing: .4em;
+	text-transform: uppercase;
+}
+
+.advantage-text {
+	font-size: 14px;
 }
 /* Default component end */
 
@@ -367,10 +384,24 @@ button {
 	margin-top: -32px;
 }
 
+.lets-talk h3 {
+	margin-bottom: 28px;
+}
+
 .lets-talk .default-text {
 	color: rgba(255, 255, 255, .7);
+	margin-bottom: 40px;
 }
 /* ===== Lets talk end ===== */
+/* =====Why choose us start ===== */
+.why-choose-us .row + .row {
+	margin-top: 80px;
+}
+
+.why-choose-us h6 {
+	padding: 35px 0;
+}
+/* =====Why choose us end ===== */
 
 /* ===== Reviews start ===== */
 .reviews-carousel {
