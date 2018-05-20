@@ -8,9 +8,36 @@
 }
 
 @font-face {
+    font-family: 'dosislight';
+    src: url('dosis-light-webfont.woff2') format('woff2'),
+         url('dosis-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
     font-family: 'open_sanslight';
     src: url('opensans-light-webfont.woff2') format('woff2'),
          url('opensans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('opensans-regular-webfont.woff2') format('woff2'),
+         url('opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('opensans-semibold-webfont.woff2') format('woff2'),
+         url('opensans-semibold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
@@ -148,19 +175,32 @@ button {
 }
 
 .btn {
-	/* общие стили для всех кнопок */
+	font-family: 'open_sansregular', sans-serif;
+	letter-spacing: .2em;
+	line-height: 1.73333333333em;
+	text-transform: uppercase;
+	border-radius: 2px;
 }
 
 .btn-default {
-	/* стили для черной кнопки */
+	font-size: .86666666666rem;
+	background-color: black;
+	color: white;
+	padding: 13px 21px;
 }
 
 .btn-large {
-	/* для кнопок серых и больших */
+	font-size: .93333333333rem;
+	background-color: rgba(207, 207, 207, .8);
+	color: black;
+	padding: 15px 40px;
 }
 
 .btn-small {
- 	/* для мал кнопок*/
+	 font-size: .73333333333rem;
+	 background-color: #e5e5e5;
+	 color: #777;
+	 padding: 9px 15px;
 }
 
 .title {
@@ -173,11 +213,16 @@ button {
 }
 
 .title.title-light {
+	font-family: 'dosislight', sans-serif;
 	letter-spacing: .3em;
 }
 
 .title.title-white {
 	color: #fff;
+}
+
+.advantage-icon {
+	font-size: 49px;
 }
 /* Default component end */
 /* Custom style start */
