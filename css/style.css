@@ -432,6 +432,11 @@ button {
 	max-width: 33.3333%;
 	padding: 4px;
 }
+
+.item-gray {
+	-webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
 /* ===== Portfolio end ===== */
 
 /* ===== Like our works start ===== */
