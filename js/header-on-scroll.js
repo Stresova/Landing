@@ -8,7 +8,7 @@ function onScroll(e) {
     if (pos > headerHeight + 100) {
         header.css({
             'position': 'fixed',
-            'top': '-75px',
+            'top': -(headerHeight + 50),
             'background-color': '#000'
         });
     }

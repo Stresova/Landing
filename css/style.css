@@ -883,18 +883,20 @@ textarea.form-control {
 /* =====Why choose us end ===== */
 
 /* ===== Reviews start ===== */
+.reviews {
+	overflow: hidden;
+}
+
 .reviews-carousel {
 	padding: 140px 0;
 }
 
 .slick-arrow {
 	position: absolute;
-	/*top: 50%;
-	transform: translateY(-50%);*/
-	z-index: 1;
 	top: 0;
 	height: 100%;
 	width: 90px;
+	z-index: 1;
 	cursor: pointer;
 }
 
@@ -904,6 +906,38 @@ textarea.form-control {
 
 .slick-arrow.slick-next {
 	right: 0;
+}
+
+.slick-arrow .carousel-button {
+	width: 63px;
+	height: 63px;
+	background-color: #fff;
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 50%;
+	margin-top: -31px;
+	margin-left: -32px;
+}
+
+.slick-arrow .carousel-button .fa {
+	position: absolute;
+	transform: rotate(45deg);
+	font-size: 10px;
+}
+
+.slick-arrow.slick-prev .carousel-button .fa {
+	bottom: 14px;
+	right: 17px;
+}
+
+.slick-arrow.slick-next .carousel-button .fa {
+	top: 17px;
+	left: 14px;
+}
+
+.slick-arrow.slick-next .carousel-button {
+	right: 0;
+	margin-right: -32px;
 }
 
 .slick-dots {
