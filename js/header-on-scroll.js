@@ -1,4 +1,4 @@
-const header = $('.header');
+const header = $('.header-container');
 const windowHeight = $(window).height();
 const headerHeight = header.outerHeight();
 

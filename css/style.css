@@ -224,6 +224,10 @@ textarea {
 }
 
 @media (max-width: 991px) {
+	html {
+		font-size: 12px;
+	}
+
 	.col-md-1 {
 		width: 8.333333333%
 	}
@@ -274,6 +278,10 @@ textarea {
 }
 
 @media (max-width: 767px) {
+	html {
+		font-size: 10px;
+	}
+
 	.col-sm-1 {
 		width: 8.333333333%
 	}
@@ -562,7 +570,7 @@ textarea.form-control {
 /* ===== Header start ===== */
 .header-container {
 	background-color: transparent;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -602,6 +610,7 @@ textarea.form-control {
 		display: block;
 	}
 }
+/* ===== Header end ===== */
 
 /* ===== Inner start ===== */
 .inner {
@@ -640,6 +649,26 @@ textarea.form-control {
 	margin-top: 100px;
 }
 
+.inner-button {
+	width: 27px;
+	height: 27px;
+	color: #000;
+	background-color: #fff;
+	border-radius: 3px;
+	transform: rotate(-45deg);
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	cursor: pointer;
+
+}
+
+.inner-button .fas {
+	position: absolute;
+	transform: rotate(45deg) translate(30%, 80%);
+	font-size: .93333rem;
+}
+
 @media (max-width: 992px) {
 	.inner-title {
 		font-size: 1.5rem;
@@ -650,9 +679,28 @@ textarea.form-control {
 	.inner-subtitle {
 		margin-top: 50px;
 	}
+
+	.inner-button .fas {
+		transform: rotate(45deg) translate(50%, 80%);
+	}
+}
+
+@media (max-width: 767px) {
+	.inner-subtitle {
+		margin-top: 35px;
+	}
+
+	.inner-button .fas {
+		transform: rotate(45deg) translate(60%, 80%);
+	}
+}
+
+@media (max-width: 567px) {
+	.inner-subtitle {
+		margin-top: 25px;
+	}
 }
 /* ===== Inner end ===== */
-/* ===== Header end ===== */
 
 /* ===== About studio start ===== */
 .about-studio {
@@ -661,6 +709,82 @@ textarea.form-control {
 
 .about-studio .row + .row {
 	margin-top: 100px;
+}
+
+.team-item-photo {
+	line-height: 0;
+	height: 450px;
+	position: relative;
+	perspective: 2000px;
+}
+
+.team-item-skills {
+	background-color: #000;
+	transform: rotateY(180deg);
+	padding: 40px;
+}
+
+.container-for-flip {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	backface-visibility: hidden;
+	transition: all .8s ease;
+}
+
+.team-item-photo:hover .team-item-front {
+	transform: rotateY(180deg);
+}
+
+.team-item-photo:hover .team-item-skills {
+	transform: rotateY(360deg);
+}
+
+.skill + .skill {
+	margin-top: 20px;
+}
+
+.progress-bar {
+	border: 1px solid #fff;
+	height: 12px;
+	width: 100%;
+	position: relative;
+}
+
+.progress-bar .progress {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background-color: #fff;
+}
+
+.skills-title {
+	font-family: 'dosisregular', sans-serif;
+	font-size: 1.2rem;
+	color: #fff;
+	letter-spacing: .3em;
+	line-height: 28px;
+	text-transform: uppercase;
+}
+
+.skills-text {
+	font-family: 'open_sansregular', sans-serif;
+	font-size: .86rem;
+	line-height: 21px;
+	color: rgba(255, 255, 255, .5);
+	padding: 23px 0 33px 0;
+}
+
+.skill-name {
+	font-family: 'open_sansregular', sans-serif;
+	font-size: .73333rem;
+	letter-spacing: .2em;
+	line-height: 25px;
+	color: rgba(255, 255, 255, .9);
+	text-transform: uppercase;
 }
 
 .team-item-info span {
@@ -679,6 +803,14 @@ textarea.form-control {
 	margin-top: 17px;
 }
 
+.item-3 .team-item-skills {
+	background: url('../img/skills-cover-3.png');
+}
+
+.item-3 .team-item-skills .progress-bar .progress {
+	background-color: rgba(255, 255, 255, .75);
+}
+
 @media (max-width: 767px) {
 	.about-studio .row .col + .col {
 		margin-top: 30px;
@@ -690,6 +822,12 @@ textarea.form-control {
 
 	.about-studio .row .col + .col .team-item {
 		padding-top: 50px;
+	}
+}
+
+@media (max-width: 567px) {
+	.team-item-photo {
+		height: 380px;
 	}
 }
 /* ===== About studio end ===== */
@@ -1250,6 +1388,7 @@ textarea.form-control {
 .footer-container {
 	padding: 142px 0 58px 0;
 	text-align: center;
+	position: relative;
 }
 
 .social li {
@@ -1285,5 +1424,56 @@ textarea.form-control {
 	font-size: .7333rem;
 	color: #999;
 }
+
+.footer-button {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.footer-button .fas {
+	font-size: 1rem;
+	color: #c6c6c6;
+	padding-right: 31px;
+	padding-bottom: 31px;
+	cursor: pointer;
+}
 /* ===== Footer end ===== */
+
+/* ===== Animation start ===== */
+.animate-opacity {
+	opacity: 0;
+	animation: opacity .5s ease-in .5s forwards;
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.animate-scale {
+	transform: scale(0);
+	animation: scale .5s ease-in 1s forwards;
+}
+
+@keyframes scale {
+	25% {
+		transform: scale(0.6);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	75% {
+		transform: scale(0.6);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+/* ===== Animation end ===== */
+
 /* Custom style end */

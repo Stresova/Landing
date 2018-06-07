@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/et-line.css">
     <!-- Slicknav styles -->
     <link rel="stylesheet" href="css/slicknav.css">
+    <!-- Animate css-->
+    <link rel="stylesheet" href="css/animate.css">
 		<!-- Custom style -->
 		<link rel="stylesheet" href="css/style.css">
   </head>
@@ -19,21 +21,25 @@
     <!-- #header -->
     <div id="header">
       <div class="header-container">  
-        <div class="header-logo">
+        <div class="header-logo animate-scale">
           <a href="#"><img src="img/logo.png" alt=""></a>
         </div>
         <!-- /.header-logo-->
-        <ul class="header-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul class="header-nav animate-scale">
+          <li><a href="#" data-scroll=".inner">Home</a></li>
+          <li><a href="#" data-scroll=".about-studio">About</a></li>
+          <li><a href="#" data-scroll=".services">Services</a></li>
+          <li><a href="#" data-scroll=".portfolio">Works</a></li>
+          <li><a href="#" data-scroll=".contacts">Contact</a></li>
         </ul>
         <!-- /.header-nav -->
       </div>
       <!-- /.header-container -->
-      <div class="inner">
+    </div>
+    <!-- /#Header -->
+    <!-- #Main -->
+    <div id="main">
+      <div class="inner animate-opacity">
         <div class="inner-content"> 
           <h2 class="inner-title">Thomas Rhythm</h2>
           <!-- /.inner-title -->
@@ -41,13 +47,12 @@
           <!-- /.inner-subtitle -->
         </div>
         <!-- /.inner-content -->
+        <div class="inner-button" data-scroll=".about-studio">
+          <a href="#"><i class="fas fa-chevron-down"></i></a>
+        </div>
       </div>
       <!-- /.inner -->
-    </div>
-    <!-- /#Header -->
-    <!-- #Main -->
-    <div id="main">
-      <div class="default-section about-studio">
+      <div class="default-section about-studio wow slideInUp">
         <div class="container">
           <h3 class="title title-dark">About studio</h3>
           <div class="row">
@@ -73,7 +78,47 @@
             <div class="col col-4 col-sm-12">
               <div class="team-item">
                 <div class="team-item-photo">
-                  <img src="img/team-img-1.jpg" alt="">
+                  <div class="container-for-flip team-item-front">
+                      <img src="img/team-img-1.jpg" alt="">
+                  </div>
+                  <!-- /.team-item-front -->
+                  <div class="container-for-flip team-item-skills">
+                    <h3 class="skills-title">Skills</h3>
+                    <p class="skills-text">Curabitur iaculis accumsan augue, nec finibus mauris pretium eu. Duis placerat ex gravida nibh tristique porta.</p>
+                    <div class="skill">
+                      <h6 class="skill-name">Branding</h6>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                      </div>
+                      <!-- /.progress-bar -->
+                    </div>
+                    <!-- /.skill -->
+                    <div class="skill">
+                      <h6 class="skill-name">Design</h6>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                      </div>
+                      <!-- /.progress-bar -->
+                    </div>
+                    <!-- /.skill -->
+                    <div class="skill">
+                      <h6 class="skill-name">Development</h6>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                      </div>
+                      <!-- /.progress-bar -->
+                    </div>
+                    <!-- /.skill -->
+                    <div class="skill">
+                      <h6 class="skill-name">Photography</h6>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 77%;"></div>
+                      </div>
+                      <!-- /.progress-bar -->
+                    </div>
+                    <!-- /.skill -->
+                  </div>
+                  <!-- /.team-item-skills -->
                 </div>
                 <!-- /.team-item-photo -->
                 <div class="team-item-info text-center">
@@ -88,7 +133,47 @@
             <div class="col col-4 col-sm-12">
               <div class="team-item">
                 <div class="team-item-photo">
-                  <img src="img/team-img-2.jpg" alt="">
+                  <div class="container-for-flip team-item-front">
+                    <img src="img/team-img-2.jpg" alt="">
+                  </div>
+                  <!-- /.team-item-front -->
+                  <div class="container-for-flip team-item-skills">
+                    <h3 class="skills-title">Skills</h3>
+                    <p class="skills-text">Curabitur iaculis accumsan augue, nec finibus mauris pretium eu. Duis placerat ex gravida nibh tristique porta.</p>
+                    <div class="skill">
+                      <h6 class="skill-name">Branding</h6>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                      </div>
+                      <!-- /.progress-bar -->
+                    </div>
+                    <!-- /.skill -->
+                    <div class="skill">
+                      <h6 class="skill-name">Design</h6>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                      </div>
+                      <!-- /.progress-bar -->
+                    </div>
+                    <!-- /.skill -->
+                    <div class="skill">
+                      <h6 class="skill-name">Development</h6>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                      </div>
+                      <!-- /.progress-bar -->
+                    </div>
+                    <!-- /.skill -->
+                    <div class="skill">
+                      <h6 class="skill-name">Photography</h6>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 77%;"></div>
+                      </div>
+                      <!-- /.progress-bar -->
+                    </div>
+                    <!-- /.skill -->
+                  </div>
+                  <!-- /.team-item-skills -->
                 </div>
                 <!-- /.team-item-photo -->
                 <div class="team-item-info text-center">
@@ -102,8 +187,48 @@
             <!-- /.col col-4 -->
             <div class="col col-4 col-sm-12">
               <div class="team-item">
-                <div class="team-item-photo">
-                  <img src="img/team-img-3.jpg" alt="">
+                <div class="team-item-photo item-3">
+                  <div class="container-for-flip team-item-front">
+                    <img src="img/team-img-3.jpg" alt="">
+                  </div>
+                  <!-- /.team-item-front -->
+                  <div class="container-for-flip team-item-skills">
+                    <h3 class="skills-title">Skills</h3>
+                    <p class="skills-text">Curabitur iaculis accumsan augue, nec finibus mauris pretium eu. Duis placerat ex gravida nibh tristique porta.</p>
+                    <div class="skill">
+                      <h6 class="skill-name">Branding</h6>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                      </div>
+                      <!-- /.progress-bar -->
+                    </div>
+                    <!-- /.skill -->
+                    <div class="skill">
+                      <h6 class="skill-name">Design</h6>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                      </div>
+                      <!-- /.progress-bar -->
+                    </div>
+                    <!-- /.skill -->
+                    <div class="skill">
+                      <h6 class="skill-name">Development</h6>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                      </div>
+                      <!-- /.progress-bar -->
+                    </div>
+                    <!-- /.skill -->
+                    <div class="skill">
+                      <h6 class="skill-name">Photography</h6>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 77%;"></div>
+                      </div>
+                      <!-- /.progress-bar -->
+                    </div>
+                    <!-- /.skill -->
+                  </div>
+                  <!-- /.team-item-skills -->
                 </div>
                 <!-- /.team-item-photo -->
                 <div class="team-item-info text-center">
@@ -666,6 +791,9 @@
             <span class="footer-name text-center">© Rhythm 2014</span>
             <span class="footer-slogan text-center">Made with love for great people</span>
           </div>
+          <div class="footer-button" data-scroll=".inner">
+              <i class="fas fa-caret-up"></i>
+          </div>
           <!-- /.footer-text -->
         </div>
         <!-- /.footer-container -->
@@ -694,6 +822,12 @@
 
     <!-- Slicknav -->
     <script src="js/jquery.slicknav.min.js"></script>
+
+    <!-- Header-on-scroll -->
+    <script src="js/header-on-scroll.js"></script>
+
+    <!-- WOW animate -->
+    <script src="js/wow.min.js"></script>
     
     <!-- Init plugins -->
     <script src="js/init.js"></script>
