@@ -282,6 +282,10 @@ textarea {
 		font-size: 10px;
 	}
 
+	.container {
+		padding-right: 45px;
+	}
+
 	.col-sm-1 {
 		width: 8.333333333%
 	}
@@ -576,7 +580,6 @@ textarea.form-control {
 	right: 0;
 	max-width: 100%;
 	z-index: 999;
-	overflow: hidden;
 	padding: 32px 24px;
 }
 
@@ -865,6 +868,10 @@ textarea.form-control {
 
 .services-tab ul li a span:last-child {
 	margin-top: 30px;
+}
+
+#tabs-3 p + p {
+	margin-top: 35px;
 }
 
 @media (max-width: 991px) {
