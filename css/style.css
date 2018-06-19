@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'dosisregular';
-    src: url('css/dosis-regular-webfont.woff2') format('woff2'),
-         url('css/dosis-regular-webfont.woff') format('woff');
+    src: url('../fonts/dosis-regular-webfont.woff2') format('woff2'),
+         url('../fonts/dosis-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'dosislight';
-    src: url('css/dosis-light-webfont.woff2') format('woff2'),
-         url('css/dosis-light-webfont.woff') format('woff');
+    src: url('../fonts/dosis-light-webfont.woff2') format('woff2'),
+         url('../fonts/dosis-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'open_sanslight';
-    src: url('css/opensans-light-webfont.woff2') format('woff2'),
-         url('css/opensans-light-webfont.woff') format('woff');
+    src: url('../fonts/opensans-light-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
     font-family: 'open_sansregular';
-    src: url('css/opensans-regular-webfont.woff2') format('woff2'),
-         url('css/opensans-regular-webfont.woff') format('woff');
+    src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
@@ -36,8 +36,8 @@
 
 @font-face {
     font-family: 'open_sanssemibold';
-    src: url('css/opensans-semibold-webfont.woff2') format('woff2'),
-         url('css/opensans-semibold-webfont.woff') format('woff');
+    src: url('../fonts/opensans-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-semibold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
@@ -424,6 +424,7 @@ textarea {
 	letter-spacing: .2em;
 	text-transform: uppercase;
 	border-radius: 2px;
+	line-height: 1;
 }
 
 .btn-default {
@@ -624,7 +625,7 @@ textarea.form-control {
 
 .inner-content::before {
 	content: '';
-	padding-top: 70px;
+	padding-top: 200px;
 }
 
 .inner-content {
@@ -653,8 +654,8 @@ textarea.form-control {
 }
 
 .inner-button {
-	width: 27px;
-	height: 27px;
+	width: 24px;
+	height: 24px;
 	color: #000;
 	background-color: #fff;
 	border-radius: 3px;
@@ -663,12 +664,11 @@ textarea.form-control {
 	bottom: 10%;
 	left: 50%;
 	cursor: pointer;
-
 }
 
 .inner-button .fas {
 	position: absolute;
-	transform: rotate(45deg) translate(30%, 80%);
+	transform: rotate(45deg) translate(20%, 80%);
 	font-size: .93333rem;
 }
 
@@ -962,12 +962,7 @@ textarea.form-control {
 	color: black;
 }
 
-.portfolio .row {
-	padding-bottom: 0;
-}
-
 .portfolio-item {
-	display: inline-block;
 	width: 33.3333%;
 	padding: 4px;
 	float: left;
@@ -1013,6 +1008,10 @@ textarea.form-control {
 /* ===== Portfolio end ===== */
 
 /* ===== Like our works start ===== */
+.small-section.like-our-works {
+	clear: both;
+}
+
 .like-our-works h3 {
 	margin-bottom: 25px;
 }
@@ -1143,6 +1142,7 @@ textarea.form-control {
 
 .review-wrapper.blockquote-text {
 	color: rgba(255, 255, 255, .75);
+	font-size: 1.2rem;
 }
 
 .review-wrapper.blockquote-name {
@@ -1218,6 +1218,8 @@ textarea.form-control {
 
 .fa-chevron-right {
 	padding-left: 5px;
+	font-size: .6rem;
+	line-height: 1;
 }
 
 .news-align {
@@ -1230,7 +1232,6 @@ textarea.form-control {
 }
 
 .news .btn {
-	display: block;
 	margin-bottom: 140px;
 }
 
@@ -1334,13 +1335,15 @@ textarea.form-control {
 	font-size: 11px;
 }
 
+@media (max-width: 992px) {
+	.contacts .row .col + .col {
+		margin-top: 20px;
+	}
+}
+
 @media (max-width: 767px) {
 	.contacts .row .col {
 		display: block;
-	}
-
-	.contacts .row .col + .col {
-		margin-top: 20px;
 	}
 
 	.form-col {
@@ -1431,7 +1434,7 @@ textarea.form-control {
 }
 
 .social li + li {
-	margin-left: 13px;
+	margin-left: 20px;
 }
 
 .social a:hover {
@@ -1461,15 +1464,13 @@ textarea.form-control {
 
 .footer-button {
 	position: fixed;
-	bottom: 0;
-	right: 0;
+	bottom: 31px;
+	right: 31px;
 }
 
 .footer-button .fas {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	color: #c6c6c6;
-	padding-right: 31px;
-	padding-bottom: 31px;
 	cursor: pointer;
 }
 /* ===== Footer end ===== */
