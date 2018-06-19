@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'dosisregular';
-    src: url('dosis-regular-webfont.woff2') format('woff2'),
-         url('dosis-regular-webfont.woff') format('woff');
+    src: url('css/dosis-regular-webfont.woff2') format('woff2'),
+         url('css/dosis-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'dosislight';
-    src: url('dosis-light-webfont.woff2') format('woff2'),
-         url('dosis-light-webfont.woff') format('woff');
+    src: url('css/dosis-light-webfont.woff2') format('woff2'),
+         url('css/dosis-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'open_sanslight';
-    src: url('opensans-light-webfont.woff2') format('woff2'),
-         url('opensans-light-webfont.woff') format('woff');
+    src: url('css/opensans-light-webfont.woff2') format('woff2'),
+         url('css/opensans-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
     font-family: 'open_sansregular';
-    src: url('opensans-regular-webfont.woff2') format('woff2'),
-         url('opensans-regular-webfont.woff') format('woff');
+    src: url('css/opensans-regular-webfont.woff2') format('woff2'),
+         url('css/opensans-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
@@ -36,8 +36,8 @@
 
 @font-face {
     font-family: 'open_sanssemibold';
-    src: url('opensans-semibold-webfont.woff2') format('woff2'),
-         url('opensans-semibold-webfont.woff') format('woff');
+    src: url('css/opensans-semibold-webfont.woff2') format('woff2'),
+         url('css/opensans-semibold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
@@ -658,7 +658,7 @@ textarea.form-control {
 	color: #000;
 	background-color: #fff;
 	border-radius: 3px;
-	transform: rotate(-45deg);
+	transform: rotate(-45deg) translate(-50%);
 	position: absolute;
 	bottom: 10%;
 	left: 50%;
@@ -968,15 +968,19 @@ textarea.form-control {
 
 .portfolio-item {
 	display: inline-block;
-	max-width: 33.3333%;
+	width: 33.3333%;
 	padding: 4px;
 	float: left;
 	line-height: 0;
 }
 
+.portfolio-item img {
+	width: 100%;
+}
+
 @media (max-width: 991px) {
 	.portfolio-item {
-		max-width: 50%;
+		width: 50%;
 	} 
 
 	.portfolio .default-text {
@@ -997,7 +1001,7 @@ textarea.form-control {
 
 @media (max-width: 567px) {
 	.portfolio-item {
-		max-width: 100%;
+		width: 100%;
 		padding-bottom: 4px;
 	}
 
@@ -1172,19 +1176,23 @@ textarea.form-control {
 }
 
 .latest-news-title {
-	display: inline-block;
+	padding-bottom: 80px;
 }
 
-.latest-news-title .title {
+.latest-news-title h3 {
 	float: left;
 }
 
-.latest-news-title .news-text {
+.latest-news-title a {
 	float: right;
 }
 
+.latest-news .row {
+	display: inline-block;
+}
+
 .news-img img {
-	width: 100%
+	width: 100%;
 }
 
 .news .news-title {
@@ -1377,10 +1385,18 @@ textarea.form-control {
 	opacity: 0;
 }
 
+.on-map-block-content::before {
+	content: '';
+	padding-top: 165px;
+}
+
 .on-map-block-content {
-	vertical-align: middle;
 	text-align: center;
-	padding: 165px 0;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 100%;
 }
 
 .open-map-title {
